@@ -1,0 +1,18 @@
+<ion-content>
+    <div *ngIf="weapon">
+        <h2>{{weapon.name}} Details</h2>
+        <div>
+            <label>Name:<input [(ngModel)]="weapon.name" placeholder="name">
+            </label>
+            <label>Damage:<input [(ngModel)]="weapon.damage" placeholder="damage">
+            </label>
+        </div>
+        <div>
+            <button class="save" (click)="save()">Save</button>
+            <button (click)="delete()">Delete</button>
+            <button (click)="goBack()">Back</button>
+        </div>
+    </div>
+    <app-message></app-message>
+
+</ion-content>

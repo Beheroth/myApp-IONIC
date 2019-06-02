@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div>
+        <h3>Create a New Scenario</h3>
+
+        <label>Scenario name:
+            <input #ScenarioName />
+        </label>
+        <br>
+        <label>GM name:
+            <input #ScenarioGM />
+        </label>
+        <br>
+
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(ScenarioName.value, ScenarioGM.value); ScenarioGM.value=''; ScenarioName.value='';">
+            Create
+        </button>
+    </div>
+</ion-content>

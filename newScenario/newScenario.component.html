@@ -1,0 +1,20 @@
+<ion-content>
+    <div>
+        <h3>Create a New Scenario</h3>
+
+        <label>Scenario name:
+            <input #ScenarioName />
+        </label>
+        <br>
+        <label>GM name:
+            <input #ScenarioGM />
+        </label>
+        <br>
+
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(ScenarioName.value, ScenarioGM.value); ScenarioGM.value=''; ScenarioName.value='';">
+            Create
+        </button>
+    </div>
+    <app-message></app-message>
+</ion-content>

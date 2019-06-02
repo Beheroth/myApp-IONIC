@@ -1,0 +1,162 @@
+/* Application-wide Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*
+h1 {
+  color: #343;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[type="text"], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+/* everywhere else */
+/*
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+*/
+* {
+    text-align: center;
+}
+
+html, body, #all {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background: #E0E0E0;
+    overflow-x: hidden;
+}
+
+h1 {
+	margin-top: 8px;
+}
+
+h1, h2 {
+    border-radius: 4px;
+    color: #FFFFFF;
+    background: #3F51B5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    padding-left: 32px;
+    padding-right: 32px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+button {
+    font-family: "Roboto medium", sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    height: 36px;
+    min-width: 88px;
+    padding: 6px 16px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    outline: 0;
+    background: #9E9E9E;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+button:hover {
+    background: #757575;
+}
+
+form div {
+    margin-top: 8px;
+}
+
+input {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    margin-top: 4px;
+	margin-left: auto;
+	margin-right: auto;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    border-radius: 8px;
+    border: 1px solid #757575;
+}
+
+
+table {
+    display: table;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    border: 1px solid #757575;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div ul {
+    display: table;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    padding: 8px;
+	padding-right: 20px;
+	padding-left: 20px;
+    border-radius: 4px;
+    margin-top: 8px;
+    border: 1px solid #757575;
+    border-spacing: 0;
+}
+
+th {
+    padding: 8px;
+    border-bottom: 2px solid #BDBDBD;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #E0E0E0;
+}
+
+td {
+    text-align: center;
+}
+
+#index-page, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#index-page {
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    background: #EEEEEE;
+    position: relative;
+    top: 32px;
+    text-align: center;
+}
+
+#error {
+    color: red;
+}

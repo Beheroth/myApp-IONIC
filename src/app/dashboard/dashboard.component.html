@@ -1,0 +1,21 @@
+<ion-content>
+    <div *ngIf="scenario">
+        <h2>Scenario: {{scenario.name}}</h2>
+        <div>
+            Dedicated Game Master: {{scenario.gM}}
+        </div>
+        <div>
+            Description: <br>
+            <input [(ngModel)]="scenario.description" placeholder="description" value={{scenario.description}}>
+        </div>
+        <div>
+            Character Selection Section (WIP)
+        </div>
+        <div>
+            <button class="save" (click)="save()">Save</button>
+            <button class="delete" (click)="delete()">Delete</button>
+            <button class="back" (click)="goBack()">Back</button>
+        </div>
+    </div>
+    <app-message></app-message>
+</ion-content>

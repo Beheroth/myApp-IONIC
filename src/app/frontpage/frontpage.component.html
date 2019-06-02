@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- fab placed to the top end -->
+    <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button [routerDirection]="'root'" routerLink="/newscenario">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div>
+        <h2>Scenarios</h2>
+        <table class="scenarios" style="width 100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>GM</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let scenario of scenarios">
+                    <th>{{scenario.id}}</th>
+                    <th routerLink="/scenario/{{scenario.id}}">{{scenario.name}}</th>
+                    <th>{{scenario.gM}}</th>
+                    <th><button class="delete" title="delete scenario" (click)="delete(scenario)">✖</button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h3>Create a New Scenario</h3>
+
+        <label>Scenario name:
+            <input #ScenarioName />
+        </label>
+        <br>
+        <label>GM name:
+            <input #ScenarioGM />
+        </label>
+        <br>
+
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(ScenarioName.value, ScenarioGM.value); ScenarioGM.value=''; ScenarioName.value='';">
+            Create
+        </button>
+    </div>
+    <app-message></app-message>
+
+</ion-content>

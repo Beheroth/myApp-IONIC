@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Weapons
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div>
+        <h2>Weapons</h2>
+        <table class="weapons" style="width 100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Damages</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let weapon of weapons">
+                    <th>{{weapon.id}}</th>
+                    <th routerLink="/detail/{{weapon.id}}">{{weapon.name}}</th>
+                    <th>{{weapon.damage}}</th>
+                    <th><button class="delete" title="delete weapon" (click)="delete(weapon)">✖</button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3>Create a Weapon</h3>
+
+        <label>Weapon name:
+            <input #WeaponName /><br>
+        </label>
+        <label>Weapon damage:
+            <input #WeaponDamage /><br>
+        </label>
+
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(WeaponName.value, WeaponDamage.value); WeaponName.value=''; WeaponDamage.value='';">
+            Add
+        </button>
+    </div>
+    <app-message></app-message>
+
+</ion-content>
